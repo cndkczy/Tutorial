@@ -1,2 +1,10 @@
 # Tutorial for phyllotaxy images analysis
-![](images/Presentation1.pdf)
+
+## Introduction 
+
+Here we aim to evaluate the maize plant canopy orientation by directly measure azimuthal leaf orientations from top view UAV images.
+Each image normally contains four rows of plants with same genotype. The middle two rows will be selected for the measurement.
+The relative angles to the planting row of the top-most leaves from each side of a plant are then measured using imageJ. This enable us to display the distribution of the azimutal angles of these leaves in a polar chart.
+
+
+![](images/Presentation1.jpg)
