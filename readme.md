@@ -78,8 +78,8 @@ To test for differences between the angles of azimuthal canopy orientations betw
       d$density<-rep(ds,nrow(d))
       sum(d$count)
       orien_summary<-rbind(orien_summary,d)
-    }
-  }
+        }
+      }
   
-    # }
-  }
+        # }
+      }
