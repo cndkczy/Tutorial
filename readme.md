@@ -149,23 +149,31 @@ The code can be used for larger dataset so I simply upload the full code which c
         ds60$d_acre<-as.factor(ds60$d_acre)
         ds60$Density<-ds60$d_acre
 
-You shall be get dataframe ds60 like this:
+You shall be able to get dataframe ds60 like this:
 
 ![](images/Screenshot3.png)
 
+Then just use ggplot to plot it:
 
-        ggplot(data=dss_w,aes(x=time,y=Abs_deviation,group=Density,color=Density))+geom_point()+
+               ggplot(data=dss,aes(x=d_acre,y=Abs_deviation))+geom_point()+
           geom_errorbar(aes(ymin=Abs_deviation-se,ymax=Abs_deviation+se),width=.2)+
           #facet_wrap("d_acre")+
           ylim(0,70)+
           theme_bw()+
-          geom_line(size=1,aes(x=time,y=Abs_deviation,group=Density,color=Density,linetype=Density))+
+          geom_path(group=1)+ # this line needs to be replace by following when use mutiple time points
+          # geom_line(size=1,aes(x=time,y=Abs_deviation,group=Density,color=Density,linetype=Density))+
           #ggtitle("60DAP")+
-          xlab("Days After Planting")+
+          xlab("Density")+
           ylab("Absolute Degree of Deviation from\n 90 Degree per Dozen Plants")+
           #facet_wrap(vars(DAP),nrow = 3)+
           theme(strip.text = element_text(face = "bold",size=12))+
           theme(axis.title = element_text(face = "bold",size=10))+
           theme(axis.text.x = element_text(angle = 45, hjust = 1,face = "bold.italic",size=10),        
                 axis.text.y = element_text(face = "bold",size=10))
-        
+
+It will returns a figure like this:
+
+![](images/Screenshot4.png)  
+
+We will have more examples when comparing different genotypes etc..
+
