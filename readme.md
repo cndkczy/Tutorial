@@ -26,5 +26,7 @@ Beginning at the axis of planting, the counterclockwise angle between the axis o
 
 A measured sample can be found at W22.csv which shall looks like folowing:
 
-![image](https://github.com/cndkczy/Tutorial/assets/16928387/44905375-c679-4862-ae50-9e18bc4d2fae)
+![image](https://github.com/cndkczy/Tutorial/assets/16928387/a208366f-d9c5-4e0b-a6ce-7202f34db286)
+
+
 
