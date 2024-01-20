@@ -124,3 +124,7 @@ Then we use ggplot2 to draw polar chart.
                 axis.text.x = element_text(face = "bold",size=7),
                 strip.text = element_text(size = 10,face = "bold"),
                 strip.text.y = element_text(face = "bold.italic"))
+
+You will have something like this:
+![](images/Screenshot2.png)
+
