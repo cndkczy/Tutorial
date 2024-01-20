@@ -26,9 +26,5 @@ Beginning at the axis of planting, the counterclockwise angle between the axis o
 
 A measured sample can be found at W22.csv which shall looks like folowing:
 
-| plot	plant	G.1	row.1	X	X.1	X.2	X.3	different.plane	Value	Angle_transformed	Orien	Deviation_from_90	Abs_deviation	d_acre	Time![image](https://github.com/cndkczy/Tutorial/assets/16928387/44905375-c679-4862-ae50-9e18bc4d2fae)
+![image](https://github.com/cndkczy/Tutorial/assets/16928387/44905375-c679-4862-ae50-9e18bc4d2fae)
 
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
