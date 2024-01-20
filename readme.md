@@ -37,7 +37,7 @@ Column Angle_transformed displayed the value that mark the counter colock wise a
 
 To test for differences between the angles of azimuthal canopy orientations between mutants and their wild-type inbred controls, the angles from ImageJ were subtracted from 90° if the angle was ≥ 0 and ≤ 180° or 270° if the angle was > 180°. The absolute values then therefore represented the degree of deviation from being perpendicular to axis of planting. Which can be found in the Abs_deviation column. A high value indicates that the measured leaf is strongly deflected from the interrow space. The calculated values were then used to estimate the genotypic effects on the degree of deviation using the ‘lm’ function of R. 
 
-#  Chapter 2 Code for polar chart
+#  Chapter 2 Code for Polar Chart
 
 The code is for full dataset with muptiple location and reps so you can modify it accordingly. 
 
@@ -171,7 +171,7 @@ Then just use ggplot to plot it:
           theme(axis.text.x = element_text(angle = 45, hjust = 1,face = "bold.italic",size=10),        
                 axis.text.y = element_text(face = "bold",size=10))
 
-It will returns a figure like this:
+It will return a figure like this:
 
 ![](images/Screenshot4.png)  
 
