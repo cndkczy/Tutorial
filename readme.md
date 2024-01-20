@@ -32,3 +32,60 @@ Plot column is rep. G column marks the genotype. The value is the returning valu
 
 However, sometimes the plants can have both leaves showing up at both upper of bottom side so the different plane column is provided to mark this info. If it is 1, for column plant with value of 1, this means the angle is from bottom side. If it is 1 at plane column but plant column value is 2 then it means this leaves is from upper side. This info is important for later drawing the polar chart to visualize the azimutal distribution of leaves.
 
+Column Angle_transformed displayed the value that mark the counter colock wise angle to the planting axis displayed in a 0-360 degree format. With odd number in the plant column displayed as 0-180 (same value as value column) and even number in the plant column displayed as 180-360 (360-the value in calue column). For the ease to display in the polar chart, which we would display the number of observations in very 30 degree from 0 to 360. The values in Angle_transformed were furher round up in column Orien. 
+
+To test for differences between the angles of azimuthal canopy orientations between mutants and their wild-type inbred controls, the angles from ImageJ were subtracted from 90° if the angle was ≥ 0 and ≤ 180° or 270° if the angle was > 180°. The absolute values then therefore represented the degree of deviation from being perpendicular to axis of planting. Which can be found in the Abs_deviation column. A high value indicates that the measured leaf is strongly deflected from the interrow space. The calculated values were then used to estimate the genotypic effects on the degree of deviation using the ‘lm’ function of R. 
+
+#  Chapter 2 Code for polar chart
+
+k<-seq(0,330,by=30)
+k<-as.data.frame(k)
+k$count<-NA
+orien_summary<-NULL
+m=1
+location<-c("Agronomy","Johnson")
+dense<-c("34000","18400","12600","8000")
+x=2
+i=1
+j=1
+v=1
+for (x in 1:2) {
+  ll<-location[x] 
+  lol_c_l<-subset(data,Field==ll) # get data into field
+  # for (i in 1:2) {
+  
+  #  reps<-subset(lol_c_l,rep==i) #get the rep
+  for (v in 1:4) { 
+    ds<-dense[v] #four densities
+    reps_d<-subset(lol_c_l,d_acre==ds)
+    
+    for (j in 1:length(t)) {
+      geno<-t[j]
+      ra<-subset(reps_d,G==geno)
+      s_k<-as.data.frame(table(ra$Orien))
+      d<-k
+      if (!nrow(s_k)==0) {
+        for (m in 1:nrow(k)) {
+          
+          angle<-d[m,1]
+          sub_a<-subset(s_k,Var1==angle)
+          if (!nrow(sub_a)==0) {
+            d[m,2]<-sub_a[1,2]
+          }else{
+            d[m,2]<-0
+          }
+        }
+      }else{}
+      d$geno<-rep(geno,nrow(d))
+      #d$replicate<-rep(paste0("rep",i),nrow(d))
+      d$site<-rep(ll,nrow(d))
+      d$density<-rep(ds,nrow(d))
+      sum(d$count)
+      orien_summary<-rbind(orien_summary,d)
+    }
+  }
+  
+  # }
+  
+  
+}
