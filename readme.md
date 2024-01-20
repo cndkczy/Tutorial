@@ -38,6 +38,10 @@ To test for differences between the angles of azimuthal canopy orientations betw
 
 #  Chapter 2 Code for polar chart
 
+The code is for full dataset with muptiple location and reps so you can modify it accordingly. 
+
+Be aware I dropped the codes on the rep with marked by "#" sign, which means this simply combined everything from one location and group them by density.
+
     k<-seq(0,330,by=30)
     k<-as.data.frame(k)
     k$count<-NA
@@ -83,3 +87,5 @@ To test for differences between the angles of azimuthal canopy orientations betw
   
         # }
       }
+The results would look like below:
+
