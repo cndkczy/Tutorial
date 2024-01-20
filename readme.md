@@ -38,39 +38,35 @@ To test for differences between the angles of azimuthal canopy orientations betw
 
 #  Chapter 2 Code for polar chart
 
-k<-seq(0,330,by=30)
-k<-as.data.frame(k)
-k$count<-NA
-orien_summary<-NULL
-m=1
-location<-c("Agronomy","Johnson")
-dense<-c("34000","18400","12600","8000")
-x=2
-i=1
-j=1
-v=1
-for (x in 1:2) {
-  ll<-location[x] 
-  lol_c_l<-subset(data,Field==ll) # get data into field
-  # for (i in 1:2) {
+  k<-seq(0,330,by=30)
+  k<-as.data.frame(k)
+  k$count<-NA
+  orien_summary<-NULL
+  location<-c("Agronomy","Johnson")
+  dense<-c("34000","18400","12600","8000")
   
-  #  reps<-subset(lol_c_l,rep==i) #get the rep
-  for (v in 1:4) { 
-    ds<-dense[v] #four densities
-    reps_d<-subset(lol_c_l,d_acre==ds)
+    for (x in 1:2) {
+    ll<-location[x] 
+    lol_c_l<-subset(data,Field==ll) # get data into field
+    # for (i in 1:2) {
+  
+    #  reps<-subset(lol_c_l,rep==i) #get the rep
+    for (v in 1:4) { 
+      ds<-dense[v] #four densities
+      reps_d<-subset(lol_c_l,d_acre==ds)
     
-    for (j in 1:length(t)) {
-      geno<-t[j]
-      ra<-subset(reps_d,G==geno)
-      s_k<-as.data.frame(table(ra$Orien))
-      d<-k
-      if (!nrow(s_k)==0) {
-        for (m in 1:nrow(k)) {
+      for (j in 1:length(t)) {
+        geno<-t[j]
+        ra<-subset(reps_d,G==geno)
+        s_k<-as.data.frame(table(ra$Orien))
+        d<-k
+        if (!nrow(s_k)==0) {
+          for (m in 1:nrow(k)) {
           
-          angle<-d[m,1]
-          sub_a<-subset(s_k,Var1==angle)
-          if (!nrow(sub_a)==0) {
-            d[m,2]<-sub_a[1,2]
+            angle<-d[m,1]
+            sub_a<-subset(s_k,Var1==angle)
+            if (!nrow(sub_a)==0) {
+              d[m,2]<-sub_a[1,2]
           }else{
             d[m,2]<-0
           }
@@ -85,7 +81,5 @@ for (x in 1:2) {
     }
   }
   
-  # }
-  
-  
-}
+    # }
+  }
