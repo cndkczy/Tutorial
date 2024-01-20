@@ -26,7 +26,8 @@ Beginning at the axis of planting, the counterclockwise angle between the axis o
 
 A measured sample can be found at W22.csv which shall looks like folowing:
 
-![image](https://github.com/cndkczy/Tutorial/assets/16928387/a208366f-d9c5-4e0b-a6ce-7202f34db286)
+![image](https://github.com/cndkczy/Tutorial/assets/16928387/cbe221fb-4a2a-487b-a1cd-e0a7322f2de7)
+
 
 Plot column is marking which rows fo a four row plot that the data were collecte. G column marks the genotype. The value is the returning value using image J. Each plant has two values, which marked in column plant by 1 or 2. 1 means the the angle of upper side of the planting axis or row (0 to 180 degree)and 2 means the angle from bottom side of the row (180-360 to row). Since for wild type plants, the plants prefer to form azimutal angles that close to perpendicular to the plant axis or row. Normally we would expect the returned values in the value column would be first value from upper side and second value from bottom side. Which would looks 1, 2, 1, 2, 1, 2 etc..
 
