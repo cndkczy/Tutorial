@@ -29,7 +29,7 @@ A measured sample can be found at W22.csv which shall looks like folowing:
 ![image](https://github.com/cndkczy/Tutorial/assets/16928387/cbe221fb-4a2a-487b-a1cd-e0a7322f2de7)
 
 
-Plot column is marking which rows fo a four row plot that the data were collecte. G column marks the genotype. The value is the returning value using image J. Each plant has two values, which marked in column plant by 1 or 2. 1 means the the angle of upper side of the planting axis or row (0 to 180 degree)and 2 means the angle from bottom side of the row (180-360 to row). Since for wild type plants, the plants prefer to form azimutal angles that close to perpendicular to the plant axis or row. Normally we would expect the returned values in the value column would be first value from upper side and second value from bottom side. Which would looks 1, 2, 1, 2, 1, 2 etc..
+The rep column mark the replicate, in this tutorial we have two. Plot column is marking which rows fo a four row plot that the data were collected normally is 1 or 2. G column marks the genotype. The value is the returning value using image J. Each plant has two values, which marked in column plant by 1 or 2. 1 means the the angle of upper side of the planting axis or row (0 to 180 degree)and 2 means the angle from bottom side of the row (180-360 to row). Since for wild type plants, the plants prefer to form azimutal angles that close to perpendicular to the plant axis or row. Normally we would expect the returned values in the value column would be first value from upper side and second value from bottom side. Which would looks 1, 2, 1, 2, 1, 2 etc..
 
 However, sometimes the plants can have both leaves showing up at both upper of bottom side so the different plane column is provided to mark this info. If it is 1, for column plant with value of 1, this means the angle is from bottom side. If it is 1 at plane column but plant column value is 2 then it means this leaves is from upper side. This info is important for later drawing the polar chart to visualize the azimutal distribution of leaves.
 
@@ -131,3 +131,41 @@ You will have something like this:
 ![](images/Screenshot2.png)
 
 #  Chapter 3 Code for Statistic Analysis 
+
+Here we will do a data visualization for the mean of W22 angles under each density. We will use summarySE function from Rmisc package.
+
+The code can be used for larger dataset so I simply upload the full code which can be easily modified later
+
+        d60<-read.csv("W22.csv")
+        ds60<-summarySE(data=d60,measurevar="Abs_deviation",groupvars = c("G","d_acre","rep"),na.rm = TRUE)
+        ds60$time<-rep("60DAP",nrow(ds60))
+        #d<-rbind(ds40,ds50,ds60)
+        #dss<-summarySE(data=d,measurevar = "Abs_deviation",groupvars = c("G","d_acre","time"),na.rm = TRUE)
+        
+        #dss_w<-subset(dss,G=="W22") #get only W22
+        #dss_w$d_acre<-as.factor(dss_w$d_acre)
+        #dss_w$Density<-dss_w$d_acre
+
+        ds60$d_acre<-as.factor(ds60$d_acre)
+        ds60$Density<-ds60$d_acre
+
+You shall be get dataframe ds60 like this:
+
+![](images/Screenshot3.png)
+
+
+        ggplot(data=dss_w,aes(x=time,y=Abs_deviation,group=Density,color=Density))+geom_point()+
+          geom_errorbar(aes(ymin=Abs_deviation-se,ymax=Abs_deviation+se),width=.2)+
+          #facet_wrap("d_acre")+
+          ylim(0,70)+
+          theme_bw()+
+          geom_line(size=1,aes(x=time,y=Abs_deviation,group=Density,color=Density,linetype=Density))+
+          #ggtitle("60DAP")+
+          xlab("Days After Planting")+
+          ylab("Absolute Degree of Deviation from\n 90 Degree per Dozen Plants")+
+          #facet_wrap(vars(DAP),nrow = 3)+
+          theme(strip.text = element_text(face = "bold",size=12))+
+          theme(axis.title = element_text(face = "bold",size=10))+
+          theme(axis.text.x = element_text(angle = 45, hjust = 1,face = "bold.italic",size=10),        
+                axis.text.y = element_text(face = "bold",size=10))
+        
