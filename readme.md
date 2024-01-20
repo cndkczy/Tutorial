@@ -16,8 +16,8 @@ As shown in the following image, the mutant and its relative wild type control e
 2. Codes for polar charts
 3. Codes for statistic analysis 
 
-#Chapter 1 Image Analyses
+#  Chapter 1 Image Analyses
 
 In each image, angles of azimuthal canopy orientation were measured from N (normally 6 plants) consecutive plants from each of the two middle rows of four-row plots. These plants exhibited the typical alternate-distichous phyllotaxy of maize. The top-most fully expanded leaf was selected from each side of each plant (Supplemental Figure S22). Thus 2N plants, i.e., 4N leaves per genotype per replication, were measured.
 For 60 DAP plants, where the tassel can be seen in the image. The three top-most leaves, the flag leaf and the two leaves below the flag leaf, were in most instances still upright and not fully expanded and thus were not measured. As a result, the measured leaves were typically the third and fourth leaves below the flag leaf. The younger stages plants, such as 50 or 40 DAP, there would normally 4 to 5 leaves that were not fully expanded and shall be skipped for data collection. Thus, it would be the topmost and second topmost collar leaves that were collected for plants at 40 or 50 DAP. 
-
+Beginning at the axis of planting, the counterclockwise angle between the axis of planting and the midrib (Supplemental Figure S22) was measured for each selected leaf, using the angle measurement function of ImageJ software (https://imagej.nih.gov/ij/). 
