@@ -38,12 +38,12 @@ To test for differences between the angles of azimuthal canopy orientations betw
 
 #  Chapter 2 Code for polar chart
 
-  k<-seq(0,330,by=30)
-  k<-as.data.frame(k)
-  k$count<-NA
-  orien_summary<-NULL
-  location<-c("Agronomy","Johnson")
-  dense<-c("34000","18400","12600","8000")
+    k<-seq(0,330,by=30)
+    k<-as.data.frame(k)
+    k$count<-NA
+    orien_summary<-NULL
+    location<-c("Agronomy","Johnson")
+    dense<-c("34000","18400","12600","8000")
   
     for (x in 1:2) {
     ll<-location[x] 
