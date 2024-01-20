@@ -23,3 +23,12 @@ In each image, angles of azimuthal canopy orientation were measured from N (norm
 For 60 DAP plants, where the tassel can be seen in the image. The three top-most leaves, the flag leaf and the two leaves below the flag leaf, were in most instances still upright and not fully expanded and thus were not measured. As a result, the measured leaves were typically the third and fourth leaves below the flag leaf. The younger stages plants, such as 50 or 40 DAP, there would normally 4 to 5 leaves that were not fully expanded and shall be skipped for data collection. Thus, it would be the topmost and second topmost collar leaves that were collected for plants at 40 or 50 DAP. 
 
 Beginning at the axis of planting, the counterclockwise angle between the axis of planting and the midrib (Supplemental Figure S22) was measured for each selected leaf, using the angle measurement function of ImageJ software (https://imagej.nih.gov/ij/). 
+
+A measured sample can be found at W22.csv which shall looks like folowing:
+
+| plot	plant	G.1	row.1	X	X.1	X.2	X.3	different.plane	Value	Angle_transformed	Orien	Deviation_from_90	Abs_deviation	d_acre	Time![image](https://github.com/cndkczy/Tutorial/assets/16928387/44905375-c679-4862-ae50-9e18bc4d2fae)
+
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
