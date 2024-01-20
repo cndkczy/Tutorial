@@ -102,23 +102,25 @@ The results would look like below:
 This way we can use ggplot2 to make polar chart. First we need transform counts into percentage. Be aware the following data is combined two replicate from each density into one dataset so we have 48 observations in each density. 
 
     w22_60$count<-(w22_60$count/48)*100
-So we used 
-    ggplot(data=w22_c,aes(x=k_2,y=count))+
-      geom_bar(stat = "identity",alpha=1)+theme_bw()+
-      facet_grid(rows=vars(density)
-      #,cols=vars(time) # groupd by density and timepoints this lines can be modified if you have mutiple time points or density
-      )+ 
-      scale_x_continuous( breaks = seq(0, 360, by = 30))+
-      theme(strip.text.y = element_text(angle = 0))+
-      xlab("Days After Planting")+
-      ylab("Leaf Azimuthal Orientation Displayed\n by Percentage")+
-      geom_vline(xintercept = 0,  
-                 color = "red", size=0.5)+
-      geom_vline(xintercept = 180,  
-                 color = "red", size=0.5)+
-      coord_polar(start =11)+ # setting start at 0 degree 
-      theme_bw()+  theme(strip.text.y = element_text(angle = 0))+
-      theme(axis.title = element_text(face = "bold",size=10),
-            axis.text.x = element_text(face = "bold",size=7),
-            strip.text = element_text(size = 10,face = "bold"),
-            strip.text.y = element_text(face = "bold.italic"))
+
+Then we use ggplot2 to draw polar chart.
+
+        ggplot(data=w22_c,aes(x=k_2,y=count))+
+          geom_bar(stat = "identity",alpha=1)+theme_bw()+
+          facet_grid(rows=vars(density)
+          #,cols=vars(time) # groupd by density and timepoints this lines can be modified if you have mutiple time points or density
+          )+ 
+          scale_x_continuous( breaks = seq(0, 360, by = 30))+
+          theme(strip.text.y = element_text(angle = 0))+
+          xlab("Days After Planting")+
+          ylab("Leaf Azimuthal Orientation Displayed\n by Percentage")+
+          geom_vline(xintercept = 0,  
+                     color = "red", size=0.5)+
+          geom_vline(xintercept = 180,  
+                     color = "red", size=0.5)+
+          coord_polar(start =11)+ # setting start at 0 degree 
+          theme_bw()+  theme(strip.text.y = element_text(angle = 0))+
+          theme(axis.title = element_text(face = "bold",size=10),
+                axis.text.x = element_text(face = "bold",size=7),
+                strip.text = element_text(size = 10,face = "bold"),
+                strip.text.y = element_text(face = "bold.italic"))
