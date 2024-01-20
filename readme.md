@@ -175,5 +175,5 @@ It will return a figure like this:
 
 ![](images/Screenshot4.png)  
 
-We will have more examples when comparing different genotypes etc..
+We will have more examples for comparing different genotypes etc.. (still working on the rest)
 
