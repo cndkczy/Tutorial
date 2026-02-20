@@ -8,7 +8,7 @@ The relative angles to the planting row of the top-most leaves from each side of
 
 As shown in the following image, the mutant and its relative wild type control exhibit different canopy orientation.
 
-![](https://github.com/cndkczy/Tutorial/assets/16928387/Presentation1.jpg)
+![](https://github.com/cndkczy/Tutorial/assets/images/Presentation1.jpg)
 
 ## Chapters
 
