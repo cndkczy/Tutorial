@@ -8,7 +8,7 @@ The relative angles to the planting row of the top-most leaves from each side of
 
 As shown in the following image, the mutant and its relative wild type control exhibit different canopy orientation.
 
-![](https://github.com/cndkczy/Tutorial/images/Presentation1.jpg)
+![](https://github.com/cndkczy/Tutorial/assets/16928387/Presentation1.jpg)
 
 ## Chapters
 
@@ -26,7 +26,7 @@ Beginning at the axis of planting, the counterclockwise angle between the axis o
 
 A measured sample can be found at W22.csv which shall looks like folowing:
 
-![image](https://github.com/cndkczy/Tutorial/assets/16928387/cbe221fb-4a2a-487b-a1cd-e0a7322f2de7)
+![](https://github.com/cndkczy/Tutorial/assets/16928387/cbe221fb-4a2a-487b-a1cd-e0a7322f2de7)
 
 
 The rep column mark the replicate, in this tutorial we have two. Plot column is marking which rows fo a four row plot that the data were collected normally is 1 or 2. G column marks the genotype. The value is the returning value using image J. Each plant has two values, which marked in column plant by 1 or 2. 1 means the the angle of upper side of the planting axis or row (0 to 180 degree)and 2 means the angle from bottom side of the row (180-360 to row). Since for wild type plants, the plants prefer to form azimutal angles that close to perpendicular to the plant axis or row. Normally we would expect the returned values in the value column would be first value from upper side and second value from bottom side. Which would look like 1, 2, 1, 2, 1, 2 etc..
