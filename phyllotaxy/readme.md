@@ -8,7 +8,7 @@ The relative angles to the planting row of the top-most leaves from each side of
 
 As shown in the following image, the mutant and its relative wild type control exhibit different canopy orientation.
 
-![](https://github.com/cndkczy/Tutorial/assets/images/Presentation1.jpg)
+![](https://github.com/cndkczy/Tutorial/blob/main/images/Presentation1.jpg)
 
 ## Chapters
 
@@ -97,7 +97,7 @@ Be aware I dropped the codes on the rep with marked by "#" sign, which means thi
 
 The results would look like below:
 
-![](https://github.com/cndkczy/Tutorial/images/Screenshot1.png)
+![](https://github.com/cndkczy/Tutorial/blob/main/images/Screenshot1.png)
 
 
 This way we can use ggplot2 to make polar chart. First we need transform counts into percentage. Be aware the following data is combined two replicate from each density into one dataset so we have 48 observations in each density. 
@@ -151,7 +151,7 @@ The code can be used for larger dataset so I simply upload the full code which c
 
 You shall be able to get dataframe ds60 like this:
 
-![](https://github.com/cndkczy/Tutorial/images/Screenshot3.png)
+![](https://github.com/cndkczy/Tutorial/blob/main/images/Screenshot3.png)
 
 Then just use ggplot to plot it:
 
@@ -173,7 +173,7 @@ Then just use ggplot to plot it:
 
 It will return a figure like this:
 
-![](https://github.com/cndkczy/Tutorial/images/Screenshot4.png)  
+![](https://github.com/cndkczy/Tutorial/blob/main/images/Screenshot4.png)  
 
 We will have more examples for comparing different genotypes etc.. (still working on the rest)
 
