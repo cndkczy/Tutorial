@@ -128,7 +128,7 @@ Then we use ggplot2 to draw polar chart.
 
 You will have something like this:
 
-![](images/Screenshot2.png)
+![](https://github.com/cndkczy/Tutorial/images/Screenshot2.png)
 
 #  Chapter 3 Code for Statistic Analysis 
 
