@@ -26,7 +26,7 @@ Using following codes to initial analysis:
         axis.text.y = element_text(face = "bold",size=10))
 
 A figure like this shall be displayed:
-
+![](https://github.com/cndkczy/Tutorial/blob/main/Root/Screenshot3.png)
 
 Then visualize the root growth by date:
 
@@ -39,4 +39,5 @@ Then visualize the root growth by date:
       theme_bw()+
       theme(axis.text.x = element_text(angle = 45, hjust = 1,face = "bold.italic",size=10),        
             axis.text.y = element_text(face = "bold",size=10))
-A figure like this shall be displayed:
+Above codes shall make a figure display time-lapse root growth:
+![](https://github.com/cndkczy/Tutorial/blob/main/Root/Screenshot2.png)
