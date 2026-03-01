@@ -29,11 +29,13 @@ A figure like this shall be displayed:
 ![](https://github.com/cndkczy/Tutorial/blob/main/Root/Screenshot3.png)
 
 Then visualize the root growth by date:
-
+    
+    a1$g2<-a1$Geno # remeber this step
     ggplot(data=a1,aes(x=factor(Date,levels=c("5DAP","7DAP","12DAP")),y=cmlength,group=Geno,fill=Rep,color=Rep))+geom_point()+
       geom_errorbar(aes(ymin=cmlength-se,ymax=cmlength+se),width=.2)+
       geom_line(aes(group=Rep,fill=Rep,color=Rep))+
-      geom_line(data=a1[1:3,2:9],size=1,linetype = "dotdash",color="red",aes(x=factor(Date,levels=c("5DAP","7DAP","12DAP")),y=cmlength,group=g2))+
+      geom_line(data=a1[1:3,2:9], # this shall be replaced by the row of W22-R1-r@ 
+          size=1,linetype = "dotdash",color="red",aes(x=factor(Date,levels=c("5DAP","7DAP","12DAP")),y=cmlength,group=g2))+
       geom_errorbar(data=a1[1:3,2:9],width=0.2,color="red",aes(x=factor(Date,levels=c("5DAP","7DAP","12DAP")),ymin=cmlength-se,ymax=cmlength+se,group=g2))+
       facet_wrap(~Geno)+
       theme_bw()+
